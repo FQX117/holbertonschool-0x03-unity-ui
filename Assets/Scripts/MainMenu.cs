@@ -13,6 +13,7 @@ public class MainMenu : MonoBehaviour
     // Start the game when the button play is trigger
     public void PlayMaze()
     {
+        SceneManager.LoadScene("maze");
         if (colorblindMode.isOn)
         {
             trapMat.color = new Color32(255, 112, 0, 1);
@@ -24,7 +25,7 @@ public class MainMenu : MonoBehaviour
             goalMat.color = Color.green;
         }
 
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        
     }
 
     // Quit the game when the button quit is trigger
